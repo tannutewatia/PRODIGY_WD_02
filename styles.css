@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+
+.stopwatch {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.display {
+    font-size: 4em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+    background: linear-gradient(135deg, #185a9d, #43cea2);
+    transform: translateY(-2px);
+}
+
+.controls button:active {
+    transform: translateY(1px);
+}
+
+.controls button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+
+#start {
+    background: linear-gradient(135deg, #34e89e, #0f3443);
+}
+
+#stop {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+#reset {
+    background: linear-gradient(135deg, #c33764, #1d2671);
+}
